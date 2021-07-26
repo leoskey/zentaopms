@@ -1,0 +1,13 @@
+version: '2'
+
+services: 
+  zentao:
+    image: leoskey/zentao:15.2
+    ports: 
+      - 80:80
+    depends_on: 
+      - mariadb
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 09d009e6767468b6aa53fb07030d2f15
