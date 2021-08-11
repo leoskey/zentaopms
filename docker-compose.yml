@@ -2,7 +2,7 @@ version: '2'
 
 services: 
   zentao:
-    image: leoskey/zentao:15.2
+    image: leoskey/zentao:12.5.3
     ports: 
       - 80:80
     depends_on: 
