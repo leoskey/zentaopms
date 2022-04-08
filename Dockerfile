@@ -1,11 +1,11 @@
-FROM php:7.2-apache as base
+FROM php:8.0-apache as base
 LABEL maintainer="leoskey <leoskey@live.com>"
 LABEL description="禅道开源版本"
 
 EXPOSE 80
 VOLUME [ "/var/www" ]
-ENV ZENTAO_VERSIOIN=12.5.3
-ARG ZENTAO_URL=https://www.zentao.net/dl/zentao/${ZENTAO_VERSIOIN}/ZenTaoPMS.${ZENTAO_VERSIOIN}.zip
+ENV ZENTAO_VERSIOIN=16.5
+ARG ZENTAO_URL=https://www.zentao.net/dl/zentao/${ZENTAO_VERSIOIN}/ZenTaoPMS.${ZENTAO_VERSIOIN}.php8.0.zip
 ENV APACHE_DOCUMENT_ROOT=/var/www/www
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
